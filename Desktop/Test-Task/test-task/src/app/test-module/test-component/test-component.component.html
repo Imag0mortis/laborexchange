@@ -1,0 +1,145 @@
+<div class="test_wrapper">
+    <h1>1. Тестовое задание (Гришко Денис)</h1>
+    <h2>2. Слайдер</h2>
+    <div class="slider">
+      <!--  -->
+      <div
+    tuiCarouselButtons
+    class="wrapper"
+>
+    <!-- <button
+        icon="tuiIconChevronLeftLarge"
+        title="Previous"
+        tuiIconButton
+        type="button"
+        (click)="carousel.prev()"
+    ></button> -->
+      <tui-carousel
+      [draggable]="true"
+      [itemsCount]="3"
+      [(index)]="indexCaorusel"
+  >
+      <ng-container *ngFor="let item of items; let i = index">
+          <img
+              *tuiItem
+              alt=""
+              draggable="false"
+              src="assets/images/{{ item }}"
+              class="item"
+              [class.item_active]="i === indexCaorusel + 1"
+          />
+      </ng-container>
+  </tui-carousel>
+  <!-- <button
+        icon="tuiIconChevronRightLarge"
+        title="Next"
+        tuiIconButton
+        type="button"
+        (click)="carousel.next()"
+    ></button> -->
+</div>
+  <!--  -->
+  <h2>3. Информация</h2>
+  <p class="information">
+    Контакт-центр:   8 (495) 705-75-75, факс: (495) 675-82-73 <br>
+Почта:  czn@social.mos.ru<br>
+Адреса:<br>
+г. Москва, ул. Щепкина, д. 38, стр. 1 - новый центр "Профессии будущего"<br>
+г. Москва, ул. Шаболовка, д.48<br>
+г. Москва, ул. Куусинена д.2, кор. 1<br>
+г. Москва, ул. Люсиновская, д. 37<br>
+г. Москва, ул. 5-я Кожуховская ул., 8, корп.2<br>
+Отделы трудоустройства <br>
+
+
+Обратите внимание!<br>
+Официальная переписка со специалистами Центра занятости населения ведется<br>
+с двух доменных адресов @social.mos.ru и @cznmos.ru<br>
+ 
+Мы пересылаем письма по защищенным каналам связи.<br>
+Доступ к письмам разрешен только отправителю и адресату.<br>
+
+
+
+Государственное казенное учреждение города Москвы Центр занятости населения города Москвы<br>
+ОГРН: 1027739851215<br>
+ИНН/КПП: 7729401652 / 770201001<br>
+</div>
+<div class="filters">
+    <!-- блок с фильтрами -->
+</div>
+<div class="vacancies">
+    <div class="container">
+        <div class="tui-row">
+            <div class="tui-col_md-4">
+                <tui-island>
+                    <p class="tui-island__category">category</p>
+                    <h3 class="tui-island__title">Some heading</h3>
+                    <p class="tui-island__paragraph">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                        et dolore magna aliqua.
+                    </p>
+                    <p class="tui-island__paragraph tui-island__paragraph_link">
+                        <a
+                            href="/"
+                            tuiLink
+                        >
+                            Link
+                        </a>
+                    </p>
+                </tui-island>
+            </div>
+            <div class="tui-col_md-4">
+                <tui-island>
+                    <p class="tui-island__category">category</p>
+                    <h3 class="tui-island__title">Some heading</h3>
+                    <p class="tui-island__paragraph">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                        et dolore magna aliqua.
+                    </p>
+                    <p class="tui-island__paragraph tui-island__paragraph_link">
+                        <a
+                            href="/"
+                            tuiLink
+                        >
+                            Link
+                        </a>
+                    </p>
+                </tui-island>
+            </div>
+            <div class="tui-col_md-4">
+                <tui-island>
+                    <p class="tui-island__category">category</p>
+                    <h3 class="tui-island__title">Some heading</h3>
+                    <p class="tui-island__paragraph">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                        et dolore magna aliqua.
+                    </p>
+                    <p class="tui-island__paragraph tui-island__paragraph_link">
+                        <a
+                            href="/"
+                            tuiLink
+                        >
+                            Link
+                        </a>
+                    </p>
+                </tui-island>
+            </div>
+        </div>
+    </div>    
+</div>
+<!-- <tui-input-slider
+tuiTextfieldSize="m"
+class="slider"
+[max]="length - 1"
+[quantum]="1"
+></tui-input-slider>
+
+<ng-template #inputCustomContent>index</ng-template> -->
+
+<tui-pagination
+[index]="indexPagination"
+[length]="length"
+(indexChange)="goToPage($event)"
+></tui-pagination>
+</div>
